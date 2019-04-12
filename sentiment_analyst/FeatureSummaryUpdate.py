@@ -41,8 +41,9 @@ class FutureSummaryUpdate:
 
         tempList =  []
         tempSet = {}
-        for i in range(list):
-            tempSet.add(i)
+        for i in data:
+            if len(set(i)) > 0:
+                print(i)
 
         print(tempSet)
         return []

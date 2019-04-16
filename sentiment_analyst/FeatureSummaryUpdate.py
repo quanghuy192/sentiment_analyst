@@ -77,18 +77,33 @@ class FutureSummaryUpdate:
                         break
 
         print('====================\n')
-        self.apriori_prune(ck, k)
+        self.apriori_prune(ck, k, large_k_item)
         return {k: ck}
 
-    def apriori_prune(self, ck: dict, n: int) -> dict:
+    def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
         result = {}
         print(ck)
+        print(last_ck)
         for k, v in ck.items():
             index_list = str(k).split(',')
             value_list = str(v).split(',')
 
-            print('====================\n')
-            self.combination_gen(value_list, n)
+            sub_list = self.combination_gen(value_list, n)
+
+            is_contain = True
+            for key, value in last_ck.items():
+                for i in sub_list:
+                    list_value_list = str(value).split(',')
+                    size = len(set(list_value_list) & set(i))
+                    # print(set(list_value_list) & set(i))
+                    if size == n - 1:
+                        continue
+                    else:
+                        is_contain = False
+            if is_contain:
+                result[k] = v
+        # print(result)
+        return result
 
     def combination_gen(self, data: list, n: int) -> list:
         result = []
@@ -101,7 +116,6 @@ class FutureSummaryUpdate:
         first_temp = []
         for q in b:
             first_temp.append(data[q - 1])
-            print(first_temp)
         result.append(first_temp)
 
         is_continue = True
@@ -118,9 +132,8 @@ class FutureSummaryUpdate:
                 data_temp = []
                 for q in b:
                     data_temp.append(data[q - 1])
-                    print(data_temp)
                 result.append(data_temp)
-
+        print(result)
         return result
 
     def gen_item_from_2_sub(self, item1: list, item2: list) -> str:

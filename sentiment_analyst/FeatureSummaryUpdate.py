@@ -33,11 +33,11 @@ class FutureSummaryUpdate:
     def apriori(self, data: list) -> list:
         ck = self.gen_large_1_item_set(data[2:3])
         # large_1_item_df = pd.DataFrame(large_1_item_set[1].items(), columns=['key', 'value'])
-        print(ck)
+        # print(ck)
         k = 2
         while len(ck[k - 1]) > 0:
             ck = self.apriori_gen(ck[k - 1], k)
-            print(ck)
+            # print(ck)
             k += 1
 
         return []
@@ -77,30 +77,51 @@ class FutureSummaryUpdate:
                         break
 
         print('====================\n')
+        self.apriori_prune(ck, k)
         return {k: ck}
 
-    def apriori_prune(self, ck: dict, k: int) -> dict:
+    def apriori_prune(self, ck: dict, n: int) -> dict:
         result = {}
-        b = k - 1
+        print(ck)
         for k, v in ck.items():
             index_list = str(k).split(',')
             value_list = str(v).split(',')
 
-    def combination_gen(self, n: int) -> list:
+            print('====================\n')
+            self.combination_gen(value_list, n)
+
+    def combination_gen(self, data: list, n: int) -> list:
         result = []
         k = n - 1
-        i = k
+        max_value = n - 1
         b = []
         for j in range(n - 1):
-            b.extend(j)
-        while b[i] == n - k + i:
-            i -= 1
-        b[i] += 1
-        h = i + 1
-        for k in range(h, n+1):
-            b[k] = b[i] + k - i
-        return result
+            b.append(j)
 
+        first_temp = []
+        for q in b:
+            first_temp.append(data[q - 1])
+            print(first_temp)
+        result.append(first_temp)
+
+        is_continue = True
+        while is_continue:
+            i = k
+            while b[i - 1] == max_value - k + i:
+                i -= 1
+            if i == 0:
+                is_continue = False
+            else:
+                b[i - 1] += 1
+                for h in range(i, max_value):
+                    b[h] = b[i] + h - i
+                data_temp = []
+                for q in b:
+                    data_temp.append(data[q - 1])
+                    print(data_temp)
+                result.append(data_temp)
+
+        return result
 
     def gen_item_from_2_sub(self, item1: list, item2: list) -> str:
         item1.extend(item2)

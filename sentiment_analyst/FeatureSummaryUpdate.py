@@ -31,7 +31,7 @@ class FutureSummaryUpdate:
         return noun_list
 
     def apriori(self, data: list) -> list:
-        ck = self.gen_large_1_item_set(data[2:3])
+        ck = self.gen_large_1_item_set(data[0:3])
         # large_1_item_df = pd.DataFrame(large_1_item_set[1].items(), columns=['key', 'value'])
         # print(ck)
         k = 2
@@ -90,19 +90,20 @@ class FutureSummaryUpdate:
 
             sub_list = self.combination_gen(value_list, n)
 
-            is_contain = True
+            is_contain = False
             for key, value in last_ck.items():
                 for i in sub_list:
                     list_value_list = str(value).split(',')
                     size = len(set(list_value_list) & set(i))
                     # print(set(list_value_list) & set(i))
                     if size == n - 1:
-                        continue
+                        is_contain = True
                     else:
-                        is_contain = False
+                        continue
             if is_contain:
                 result[k] = v
-        # print(result)
+        print(len(result))
+        print(len(ck))
         return result
 
     def combination_gen(self, data: list, n: int) -> list:

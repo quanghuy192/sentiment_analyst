@@ -2,12 +2,15 @@
 from underthesea import pos_tag
 from Apriori import Apriori
 import collections
+from Candidate import Candidate
 import pandas as pd
 from collections import OrderedDict
 from datetime import date
 
 
 class FutureSummaryUpdate:
+
+    transaction = []
 
     def read_raw_file(self) -> list:
         f = open("raw.txt", "r+")
@@ -28,16 +31,22 @@ class FutureSummaryUpdate:
             #     print(r)
             # for rr in adj_list:
             #     print(rr)
+        self.transaction = noun_list
         return noun_list
 
     def apriori(self, data: list) -> list:
-        ck = self.gen_large_1_item_set(data[0:3])
-        # large_1_item_df = pd.DataFrame(large_1_item_set[1].items(), columns=['key', 'value'])
-        # print(ck)
+        ck = self.gen_large_1_item_set(data[0:6])
+        print(ck)
         k = 2
         while len(ck[k - 1]) > 0:
             ck = self.apriori_gen(ck[k - 1], k)
-            # print(ck)
+            print(ck)
+            print('>>>>>>>>>>>>>>>>>>>>>>>>>>')
+            candidate = Candidate(ck[k])
+            for i in self.transaction:
+                candidate.subset_for_candidate(i)
+            ck_with_minsup = candidate.filter_with_support_min(3)
+            ck = {k: ck_with_minsup}
             k += 1
 
         return []
@@ -76,14 +85,11 @@ class FutureSummaryUpdate:
                     else:
                         break
 
-        print('====================\n')
         self.apriori_prune(ck, k, large_k_item)
         return {k: ck}
 
     def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
         result = {}
-        print(ck)
-        print(last_ck)
         for k, v in ck.items():
             index_list = str(k).split(',')
             value_list = str(v).split(',')
@@ -102,8 +108,6 @@ class FutureSummaryUpdate:
                         continue
             if is_contain:
                 result[k] = v
-        print(len(result))
-        print(len(ck))
         return result
 
     def combination_gen(self, data: list, n: int) -> list:
@@ -134,7 +138,6 @@ class FutureSummaryUpdate:
                 for q in b:
                     data_temp.append(data[q - 1])
                 result.append(data_temp)
-        print(result)
         return result
 
     def gen_item_from_2_sub(self, item1: list, item2: list) -> str:

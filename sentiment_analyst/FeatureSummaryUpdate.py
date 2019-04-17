@@ -22,9 +22,9 @@ class FutureSummaryUpdate:
             record_adj = []
             for item in result:
                 if item[1] == 'N' and self.one_word_prune(item[0]):
-                    record_n.append(item[0])
+                    record_n.append(str(item[0]).lower())
                 if item[1] == 'A' or item[1] == 'AP':
-                    record_adj.append(item[0])
+                    record_adj.append(str(item[0]).lower())
             noun_list.append(record_n)
             adj_list.append(record_adj)
             # for r in noun_list:
@@ -35,8 +35,13 @@ class FutureSummaryUpdate:
         return noun_list
 
     def apriori(self, data: list) -> list:
-        ck = self.gen_large_1_item_set(data[0:6])
+        ck = self.gen_large_1_item_set(data)
         print(ck)
+        candidate = Candidate(ck[1])
+        for i in self.transaction:
+            candidate.subset_for_candidate(i)
+        ck_with_minsup = candidate.filter_with_support_min(1)
+        ck = {1: ck_with_minsup}
         k = 2
         while len(ck[k - 1]) > 0:
             ck = self.apriori_gen(ck[k - 1], k)
@@ -45,7 +50,7 @@ class FutureSummaryUpdate:
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
-            ck_with_minsup = candidate.filter_with_support_min(3)
+            ck_with_minsup = candidate.filter_with_support_min(1)
             ck = {k: ck_with_minsup}
             k += 1
 

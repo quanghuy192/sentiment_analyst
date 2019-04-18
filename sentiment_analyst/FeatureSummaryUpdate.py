@@ -40,7 +40,7 @@ class FutureSummaryUpdate:
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
-        ck_with_minsup = candidate.filter_with_support_min(4)
+        ck_with_minsup = candidate.filter_with_support_min(5)
         ck = {1: ck_with_minsup}
         k = 2
         while len(ck[k - 1]) > 0:
@@ -50,7 +50,7 @@ class FutureSummaryUpdate:
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
-            ck_with_minsup = candidate.filter_with_support_min(4)
+            ck_with_minsup = candidate.filter_with_support_min(5)
             ck = {k: ck_with_minsup}
             k += 1
 

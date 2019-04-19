@@ -40,8 +40,9 @@ class FutureSummaryUpdate:
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
-        ck_with_minsup = candidate.filter_with_support_min(5)
+        ck_with_minsup = candidate.filter_with_support_min(3)
         ck = {1: ck_with_minsup}
+        last_ck = ck
         k = 2
         while len(ck[k - 1]) > 0:
             ck = self.apriori_gen(ck[k - 1], k)
@@ -50,10 +51,16 @@ class FutureSummaryUpdate:
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
-            ck_with_minsup = candidate.filter_with_support_min(5)
+            ck_with_minsup = candidate.filter_with_support_min(3)
+            last_ck = ck
             ck = {k: ck_with_minsup}
             k += 1
-
+        print(ck[k-1])
+        print('------------- Feature --------------')
+        feature = []
+        for key, value in last_ck[k-1].items():
+            feature.extend(set(str(value).split(',')))
+        print(set(feature))
         return []
 
     def gen_large_1_item_set(self, data: list) -> dict:

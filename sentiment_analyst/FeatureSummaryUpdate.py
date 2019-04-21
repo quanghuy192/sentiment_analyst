@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 from underthesea import pos_tag
+
+import sentiment_analyst
 from Apriori import Apriori
 import collections
 from Candidate import Candidate
+from underthesea import sent_tokenize
 import pandas as pd
 from collections import OrderedDict
 from datetime import date
@@ -11,6 +14,7 @@ from datetime import date
 class FutureSummaryUpdate:
 
     transaction = []
+    sentences = []
 
     def read_raw_file(self) -> list:
         f = open("raw.txt", "r+")
@@ -20,6 +24,7 @@ class FutureSummaryUpdate:
             result = pos_tag(line)
             record_n = []
             record_adj = []
+            self.sentences.extend(sent_tokenize(line))
             for item in result:
                 if item[1] == 'N' and self.one_word_prune(item[0]):
                     record_n.append(str(item[0]).lower())
@@ -32,6 +37,7 @@ class FutureSummaryUpdate:
             # for rr in adj_list:
             #     print(rr)
         self.transaction = noun_list
+        print(len(self.sentences))
         return noun_list
 
     def apriori(self, data: list) -> list:
@@ -46,6 +52,8 @@ class FutureSummaryUpdate:
         k = 2
         while len(ck[k - 1]) > 0:
             ck = self.apriori_gen(ck[k - 1], k)
+            if len(ck[k]) <= 0:
+                break
             print(ck)
             print('>>>>>>>>>>>>>>>>>>>>>>>>>>')
             candidate = Candidate(ck[k])
@@ -55,7 +63,6 @@ class FutureSummaryUpdate:
             last_ck = ck
             ck = {k: ck_with_minsup}
             k += 1
-        print(ck[k-1])
         print('------------- Feature --------------')
         feature = []
         for key, value in last_ck[k-1].items():
@@ -99,6 +106,9 @@ class FutureSummaryUpdate:
 
         self.apriori_prune(ck, k, large_k_item)
         return {k: ck}
+
+    def compactness_pruning(self):
+
 
     def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
         result = {}

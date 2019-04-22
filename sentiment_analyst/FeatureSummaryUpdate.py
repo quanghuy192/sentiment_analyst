@@ -6,6 +6,7 @@ from Apriori import Apriori
 import collections
 from Candidate import Candidate
 from underthesea import sent_tokenize
+import math
 import pandas as pd
 from collections import OrderedDict
 from datetime import date
@@ -37,7 +38,6 @@ class FutureSummaryUpdate:
             # for rr in adj_list:
             #     print(rr)
         self.transaction = noun_list
-        print(len(self.sentences))
         return noun_list
 
     def apriori(self, data: list) -> list:
@@ -46,7 +46,7 @@ class FutureSummaryUpdate:
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
-        ck_with_minsup = candidate.filter_with_support_min(3)
+        ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), 1))
         ck = {1: ck_with_minsup}
         last_ck = ck
         k = 2
@@ -59,7 +59,10 @@ class FutureSummaryUpdate:
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
-            ck_with_minsup = candidate.filter_with_support_min(3)
+            print('------------ K = ----------------')
+            print(k)
+            print(self.dynamic_support(len(data), k))
+            ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
             last_ck = ck
             ck = {k: ck_with_minsup}
             k += 1
@@ -82,6 +85,11 @@ class FutureSummaryUpdate:
             index += 1
 
         return {1: data_index}
+
+    def dynamic_support(self, n: int, i: int):
+        new_min = 0.4 * math.log10(n) / (10 * i) + 0.4
+        support = new_min * n / 100
+        return support
 
     def apriori_gen(self, large_k_item: dict, k: int) -> dict:
         ck = {}
@@ -106,9 +114,6 @@ class FutureSummaryUpdate:
 
         self.apriori_prune(ck, k, large_k_item)
         return {k: ck}
-
-    def compactness_pruning(self):
-
 
     def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
         result = {}

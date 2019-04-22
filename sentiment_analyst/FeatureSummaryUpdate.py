@@ -1,15 +1,10 @@
 # -*- coding: utf-8 -*-
 from underthesea import pos_tag
 
-import sentiment_analyst
-from Apriori import Apriori
 import collections
 from Candidate import Candidate
 from underthesea import sent_tokenize
 import math
-import pandas as pd
-from collections import OrderedDict
-from datetime import date
 
 
 class FutureSummaryUpdate:
@@ -33,10 +28,6 @@ class FutureSummaryUpdate:
                     record_adj.append(str(item[0]).lower())
             noun_list.append(record_n)
             adj_list.append(record_adj)
-            # for r in noun_list:
-            #     print(r)
-            # for rr in adj_list:
-            #     print(rr)
         self.transaction = noun_list
         return noun_list
 
@@ -59,9 +50,9 @@ class FutureSummaryUpdate:
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
-            print('------------ K = ----------------')
-            print(k)
-            print(self.dynamic_support(len(data), k))
+            # print('------------ K = ----------------')
+            # print(k)
+            # print(self.dynamic_support(len(data), k))
             ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
             last_ck = ck
             ck = {k: ck_with_minsup}
@@ -118,7 +109,6 @@ class FutureSummaryUpdate:
     def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
         result = {}
         for k, v in ck.items():
-            index_list = str(k).split(',')
             value_list = str(v).split(',')
 
             sub_list = self.combination_gen(value_list, n)
@@ -128,7 +118,6 @@ class FutureSummaryUpdate:
                 for i in sub_list:
                     list_value_list = str(value).split(',')
                     size = len(set(list_value_list) & set(i))
-                    # print(set(list_value_list) & set(i))
                     if size == n - 1:
                         is_contain = True
                     else:
@@ -183,10 +172,7 @@ class FutureSummaryUpdate:
 
 def main():
     x = FutureSummaryUpdate()
-    # x.read_raw_file()
     x.apriori(x.read_raw_file())
-
-    y = Apriori()
 
 
 if __name__ == '__main__':

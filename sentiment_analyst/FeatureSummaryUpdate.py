@@ -8,12 +8,11 @@ import math
 
 
 class FutureSummaryUpdate:
-
     transaction = []
     sentences = []
 
     def read_raw_file(self) -> list:
-        f = open("raw.txt", "r+")
+        f = open("reviews_data.txt", "r+")
         noun_list = []
         adj_list = []
         for line in f:
@@ -34,6 +33,9 @@ class FutureSummaryUpdate:
     def apriori(self, data: list) -> list:
         ck = self.gen_large_1_item_set(data)
         print(ck)
+        print('------------ K = ----------------')
+        print(1)
+        print(self.dynamic_support(len(data), 1))
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
@@ -50,9 +52,9 @@ class FutureSummaryUpdate:
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
-            # print('------------ K = ----------------')
-            # print(k)
-            # print(self.dynamic_support(len(data), k))
+            print('------------ K = ----------------')
+            print(k)
+            print(self.dynamic_support(len(data), k))
             ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
             last_ck = ck
             ck = {k: ck_with_minsup}

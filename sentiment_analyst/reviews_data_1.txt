@@ -882,31 +882,123 @@ ssd của bác dùng cổng sata chắc luôn, đừng có đú
 Sata 3 băng thông cũng đạt 6Gb/s mà bác, nghĩa là tầm 750MB/s, hehe cái chính là do cái ssd thôi
 giá e này nhiu nhỉ
 Ngon rồi, chờ xem hè này Apple có ra 15 inches màu đen không r tình chứ con mac vừa lấy hôm giáng sinh h đỗi chắc xách gối ra nhà xe ngủ mất
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Nhanh phết, ssd của Samsung quả là bá đạo :D, mà cái này dùng SSD PCIe nên được vậy. Tốc độ ghi và đọc chênh lệch quá. Con desktop mình từng xài Visiontek 480GB PCIe có tốc độ đối xứng hơn 815/810 MBps :)
+Thật ra máy tính chỉ cần màn nét để xem JAV cho phê thôi chứ con lap mình chip core 2 dua vẫn chạy phà phà chẳng cần nâng cấp làm gì. Khi nào laptop màn 4K rẻ tầm chục củ thì mình mới đổi lap
+Cứ dùng thử SSD và bạn sẽ ko bao giờ muốn quay lại HDD :D
+đó là đối với bạn..vì cái bạn quan tâm ko phải là máy tính mà là màn hình :-/
+1 thanh niên chưa bao giờ dùng ổ SSD phát biểu cảm nghĩ :D:D:D:D:D:D
+Hi hi cái gì tốt thì ai chả thích nhưng ko có tiền. Máy tính thì mình chỉ chạy office, autocad xem phim thôi nên chẳng cần mạnh lắm. Hay lên youtube xem nên cần màn hình đẹp
+Chắc của bác là bản 256 hoặc 512GB. Về cơ bản thì dung lượng càng lớn thì tốc độ SSD càng cao vì thực chất SSD dung lượng cao là ghép kiểu raid 0 giữa các chip nhớ dung lượng thấp lại với nhau
+Mac mini 2 con đều core i5 late 2014 hả bác, thấy chíp khác thì phải
+Nếu đánh giá SSD thì cần đánh giá tốc độ Random Read / Random Write 4K, 32K, cái này mới quan trọng nhất vì nó là công việc hệ điều hành hay làm nhất. Cái mà chủ thớt đánh giá chỉ là tốc độ tuần tự thôi.
+:eek: nghe này , con SSD này không phải dạng vừa đâu :rolleyes:
+Thứ 1; test chưa dùng máy cấu hình mạnh nhất. Thứ 2; con thỏ ko thể chạy nhanh khi phải đèo con sên
+Có bật rapid mode của SSD Samsung ko đó thím :v
+Làm gì có loại ổ ssd nào trên thị trường có tốc độ khủng vậy trời
+Xài mac os với ios, mất thói quen hồi sinh viên là ngồi soi cấu hình rồi benchmark... này nọ. Vấn đề là có tiền mua ko thôi, có rồi thì cứ xài phà phà thôi. Chẳng care j cả :D.
+Thế này là chip ARM v8 sắp mạnh bằng Core i5 Broadwell rồi :)).
+tại sao nó k nâng cấp luôn bàn phím giống con 12" nhỉ, thích quả đèn phím mỗi phím một led, nhìn hay hơn và bàn phím mới có vẻ bền hơn
+theo mình thì nên mua macbook pro 2015, giá hiện giờ xuống kịch sàn luôn rồi, macbook pro 2016 có ra thì giá sẽ cao mà cũng sẽ ko có thay đổi gì nhiều. chúc bạn sớm có máy sử dụng
+Giá lúc nào cũng giữu chứ bác? Mới ra 2k5$ h giá vn là 50 củ mà
+Cái mình chờ là mình chờ nó có mỏng hơn tý nào ko thôi:)). Vì mình hay phải vác đi học. Mà mua con air vs new macbook thỳ chán lắm. Nên đang phân vân?. Hjx hjx. K biét nó lúc nào mới ra đời 2016 nhỉ. ?. Bro nào biết k ạ?,
+Bạn có hay quan tâm đến thông tin của apple ko, về mấy cái máy macbook ý. Nếu có sao bạn lại ko biết lúc nào, lạ nhỉ. Apple khi sản xuất hàng và thông báo bán thì đều theo 1 thời gian mà hãng đã hoạch định từ trước tới giờ. Gồm có 3 thời điểm ra sản phẩm: + Early: vào tháng 2, giao động trong các ngày 9 - 14 + Mid: vào tháng 6 hoặc 7, vào các ngày 20 - 24 + Late: vào tháng 10, vào các ngày 19 - 22.
+Đó, chỉ có 3 thời điểm đó thôi, năm nay 2015 thì có Early và Mid. Mà bây giờ sang tháng 11 rồi, mà Late chỉ có trong tháng 10 thôi. Nên năm nay ko ra Late nữa đâu. Còn muốn chờ 2016, thì có thể là Early, Mid hoặc là Late năm sau. Thường dòng pro ko có mỏng đâu bạn, trừ phi là Intel có thể chế tạo ra mấy con chip công suất từ 55 - hơn 100W mà nhiệt độ toả ra tương đương mấy con chip M (mới ra) hoặc chip U hay thấp hơn thì may ra mấy cái máy pro có thể mỏng đi đc. Chưa nói đến card rời đấy, =]]. Cần thì mua luôn, đắn đo suy ngĩ làm gì nhiều.
+MBP cũng tương đối nhẹ so với các dòng laptop phổ thông của các hãng khác rồi. Mình mỗi ngày phải vác lên phòn tn ở tầng 3, chưa kể sách, tài liệu vẫn thấy khoẻ re. Còn nếu so với workstation thì khỏi phải suy nghĩ nhiều, bao nhẹ :)). Pro không mỏng nữa đâu, Apple ra mắt con 12" thì đủ biết là dòng pro nó còn lâu mới thay đổi thiết kế.
+E đang chờ đợi mòn mỏi mãi k thấy ra đời skylake T.T Hqua có con mgxc2 giá oka quá mà k kịp mua tối ra đã bán mất r
+nó dùng ssd mới nhanh gấp đôi vs ssd của macbook cũ và nhanh bằng ssd của máy mac pro ( cái máy ngta gọi là giống cái thùng rác ... không biết bác có phải bạn bè vs bác hiệp không mà em thấy cái comment của bác hơi ÍT CHỮ !
+về sớm thế. khao khát cái ổ cứng mới này quá ko biết kích cỡ có giống so với đời mac air trước không, mua con ổ cứng này về lắp vào mac air có đạt được tốc độ này không nhỉ
+Em mới mua con này,không biết mấy đời air trước có thay được SSD và Ram không bác.
+Tốc độ cao nhưng dung lượng xem ra hơi thấp,
+Bản 128GB thì dung lượng thực còn lại là bao nhiêu GB vậy các bạn?
+Bác kiếm dùm cái ổ cứng nào bên ngoài ghi 128 gb mà vào kiểm tra nó được 128 gb không :| mà cái MacOS ít hơn 3,4 gb thì lợi hại thật
+bạn í hỏi 128gb dung lượng thực là bao nhiêu chứ k có nói sau khi cài hdh thì còn lại nhiêu gb :3 , bk đọc k bạn
+Rõ ràng là Macbook Pro ngon hơn rồi. Màn hình retina làm đồ hoạ này nọ chi tiết hơn nhiều.
+nâng cấp như vậy liệu pin có tốt lên nhiều ko ạ ?
+Không có màu đồng ha.
+khoảng 100 lẻ mấy GB bác à
+con này k phải con apple giới thiệp USB-C đâu bác
+Đẹp. Macbook air vẫn đẹp :D
+Đẹp vật vã.
+ngon đẹp nhưng quan trọng em vẫn không có tiền mà mua.
+Mới thấy Apple bán iPad lời như thế nào :). Cấu hình trong bài viết cũng như khối lượng riêng, chi tiết của sản phẩm trên Macbook Air đều cao hơn iPad Air mà giá không cao hơn bao nhiêu :)
+Nhìn xịn quá nhỉ :) , mà k có tiền mua
+Thiết kế đẹp, cấu hình ngon, hoàn thiện tốt, giá hợp lý nhưng thật tiếc công việc của mình lại k phù hợp sử dụng máy Mac.
+Biết khi nào mới sắm được một em Macbook nhờ, nhìn mê quá. :D
+Chuyển từ laptop Windows sang Macbook Air đã được gần 1 năm và rất đang hài lòng với nó :D
+Hệ điều hành ổn, k virus. Khởi động nhanh hơn hoặc ngang win 8,10. Touchpad thần thánh. Nhỏ gọn nhẹ đẹp
+có thì có nhưng lớp bảo mật của nó cứng hơn win nhiều, chưa kể hiệu năng máy k hề bị giảm sau 3,4 năm sử dụng, máy k bị mất giá nhiều cũng vì thế
+tốc độ con SSD này với con SSD của macpro 13" 2015 có giống nhau không mấy bác?
+Bác nào cho em hỏi nâng cấp lên broadwell thế hệ 5 rồi chạy các ứng dụng cad hay pts có ổn không. Muốn qá
+Nâng cấp bàn phím và touchpad thì gần bằng em 12" mới à :)
+Đẹp quá đẹp quá đi !!
+Giá đắt lòi . Cùng giá tiền mua bên win có hàng tá chủng loại chay vù vù. Mình thích những điều thực tế chứ ko thích bóng bẩy bên ngoài các bác nhẹ tay cho.
+Bạn biết con này giá xuất xưởng là bao nhiêu không , mà con này màn xấu , pin cũng không trâu bằng nhé :cool:
+128 GB chắc chỉ để cho dân văn phòng.
+Giá này có vẻ khá tốt nhỉ, thấy cũng không quá mắc. Tiếc là giờ chả dùng gì đến Laptop nữa :((
+Hôm nay đã đập hộp mấy em đời 2015 công nhận tốc độ nhanh chóng mặt thật
+màn hình có đẹp hơn đời trước ko bác, em cũng muốn mua mà phân vân cái màn của air nó xấu quá
+màn nó rỗ và góc nhìn kém bạn ạ, mình cũng mới mua và hợi thất vọng 1 tý, những thứ còn lại thì tuyệt
+mọi thứ đều tốt. ngoại trừ màn hình không ưng ý. nhưng cũng may là so với những màn khác chạy hệ điều hành windows thì vẫn hơn hẳ .
+kết luận: ngon, đẹp, mỏng, mạnh . nhưng e ko đủ xiền :p:p:p:p:p:p
+để render hay nhiều task nặng thì xài lap win ấy ( dạo này lap win loại vỏ nhôm có quạt tản nhiệt tốt đầy ra rồi ), em khuyên các bác đừng xài macbook :)) mua rồi mất công lại đau khổ :)) em xài macbook mà tốn tiền mua thêm cái điều hòa chỉ để cho mát máy :)) rốt cuộc lôi con lap win trâu bò ra xài, dễ nâng cấp cấu hình nữa :))
+cái gì cũng đẹp, chỉ có tiền phải chi là k dc đẹp (vs mình :D)
+"SSD tốc độ nhanh hơn gấp đôi so với SSD đang có trên các máy Macbook cũ và nhanh bằng với tốc độ của SSD trên Mac Pro (thùng rác) tức đạt gần 1300Mbps. Việc nâng cấp tốc độ ổ SSD sẽ hứa hẹn cải thiện đáng kể tốc độ thực thi của máy. Trong các nâng cấp của máy tính thì mình vẫn cho nâng cấp tốc độ SSD sẽ ảnh hưởng nhiều đến trải nghiệm người dùng nhiều nhất. Hiện nay SSD trên các máy Macbook cũ hay SSD phổ biến ở thị trường thường cao cấp thì ở mức khoảng hơn 700MB/s. Macbook Pro Retina 15" 2014 của mình chạy khoảng gần 1000MB/s thôi." Tại sao lại có vụ 1300Mbps nhỉ? Còn dưới thì xxx MB/s. Cái này là nói về băng thông hay tốc độ đọc của SSD vậy :(
+Hàng này là hàng gì ấy nhỉ, trong khi macbook air ngày 10/04 mới được mở bán tại app store mà chủ thớt đã có trên tay rồi, nhân viên bán hàng apple chăng ? Tại mình cũng đang order macbook air trên apple store để ship về nên phải chờ đến cũng đang hóng đây !!!
+Mình ở hà nội mà nên ko mua được. Bên bạn là hàng xách tay mà giá cao quá minh tham khảo bên halomobile mà anh cuhiep trên tay có 21880 thui cho con Macbook air 2015 13 inch 128gb
+Giảm giá tý nữa thì ngon
+Mình mới chuyển pro sang dùng air 2015, bác nào cho em hỏi con này có thể nâng cấp ram, ssd, không..?
+so với MBP không retina thì có so được không nhỉ, air 2015 13' nghe nói có cải thiện về màn hình nhưng không biết thế nào
+làm sao nâng cấp lên được bạn vì hiên tại máy mình la MBA 2015 (Early) và mình đã hỏi trên Apple support thì họ bảo là chỉ chọn được cấu hình lúc mua thôi, chứ không nâng cấp phần cứng vì máy xuất xưởng sao thì mua vậy. chỉ co Pro là nâng cấp được?!
+pro retina cũng potay nha bạn , chỉ nâng dc ssd thôi ram thì potay vì đã hàn chết rồi
+xin hỏi các pro. macbook air 13' 128G 2015 có nâng cấp cấu hình được không vậy
+máy của mình là Early 2015 MBA, RAM 4gb, SDD la 128gb, nhưng mình hỏi nhân viên thì không được nâng cấp lên mà chỉ chọn máy có dung lượng lớn hơn thôi. chứ nâng RAM thì không thể được. đó là thông tin mình biết từ nhân viên fpt bán hàng cho mình.
+Dòng máy này khi bạn mua cấu hình cơ bản sẽ không thể nâng cấp dc. Nên muốn cấu hình cao hơn bạn phải đặt hàng và chọn cấu hình Option ngay từ đầu.
+Bình thường nha bạn. Apple không quy định về chỉ số Cycle Count. Toàn bộ các máy khi Apple xuất xưởng đều đc test pin và các chức năng, nên chắc chắn sẽ không có máy nào có chỉ số Cycle Count là 0. Nên sẽ có những máy dc test kĩ thì chỉ số pin sẽ cao. Vd những máy mở đầu hoặc kết thúc 1 chu trình sản xuất thường có chỉ số 1x. Nói chung nó không ảnh hưởng gì đâu ^^!
+đang phân vân MJVE2 hay MF839, từng dùng Mac Air 11 khi dùng file excel nhiều hơi đơ có vẻ ngốn RAM và CPU nên đang thiên về MF839, vấn đề giá cả đầu tư thêm cũng 7 củ. Các bác cho lời khuyên với, mình dùng: web, office, PTS...
+Em vừa mua air 2015, xài được mấy bữa. Tuần trước người bạn gửi cái pro 13 2014 cài giùm app, mình đã bán cái air để múc pro, vì cái màn hình, và đã tiếc vì không biết sớm. Pro MF839 đi bạn
+Băn khoăn đúng như bác. MBA thì nhẹ nhưng chỉ lo xử lý những file ẽxcel nặng thì lại khó chịu. Mà MBP MF839 thì đắt hơn tầm 6 triệu :(
+Laptop hạn chế chơi game hành động 3D nha bạn, không phải vì cấu hình mà vấn đề ở bàn phím.... bạn ấn đè một vài phím với cường độ cao như vậy sẽ dễ làm liệt phím... mà bàn phím MacBook không hề rẽ đâu bạn...hihihi... Có chơi thì chơi game dàn trận thôi....
+Mình có 1 em MBA 13" 2015 (128GB SSD) còn bảo hành 4 tháng (Tháng 04/2016), máy chính hãng mua tại Nguyễn Kim, còn đầy đủ phụ kiện + full box + hóa đơn. Máy xài rất kỹ nên không 1 vết trầy xước - không cấn móp, pin tầm 10-11 tiếng. Đang có nhu cầu đổi máy khác nên bác nào cần thì inbox mình nhé :D Mình ở Cần Thơ.
+Giải đáp thắc mắc hộ mình với. Con mba 2013 max option với mba 2015 cơ bản i5 4gb thì con nào ok hơn ạ?!
+Máy 2015 có bảo hành, máy 2013 không. Máy 2015 thì pin sẽ còn tốt hơn. Máy 2013 nếu max option thì khả năng xử lý đa nhiệm tốt hơn, nhưng đồ hoạ sẽ kém hơn.
+Bác chọn con MBA 2015 đi bác. Mình có 1 máy mới 99.9 % không trầy xước và ko cấn móp. Hàng chính hãng mua tại Nguyễn Kim, còn bảo hành T4/2016. Do có nhu cầu đổi máy nên mình bán.
+Mình mới mua em này. Các bác cho hỏi cable magsafe cho phiên bản này là sợi magsafe 2 45Wh đúng không?
+Máy em Macbook Air 11.6" Early 2015. sao Pin chỉ dc tầm 6 tiếng hơn chứ làm gì dc 9 tiếng như quảng cáo nhỉ? Mở Cốc Cốc với 4-5 tab thôi mà
+Cục sạc của mình hoàn thiện không xuất sắc lắm nếu so với máy, khe hở không đều và cũng khít lắm. Không biết cuat các bác sao
+Của mình 100% pin 8 tiếng 30 phút chờ nè :D
+Ấn phím option và click vào mục pin là hiện
+Cốc Cốc, Chrome, hay kể cả Opera đều ko tiết kiệm pin bằng Safari đâu bạn
+Chạy dc 6h là tốt nhất rồi. Nerus để giảm màn hình về ánh sáng đi thì có thể dc hơn thế bạn à.
+màn hình của mình để tầm 4 vạch thôi tức là khoảng 30%
+À các bác nào rành laptop cho e hỏi 30 cũ rưỡi mua con nào đây e đang ngắm con macbook pro mf840 hoặc la con window thi hp spectre hoặc la dell xps cảm ơn ạ
+MJVE2 & MJVG2 khác nhau ở những điểm gì vậy AE :eek:
+Khác về dung lượng ổ cứng nha bạn.
+Ngoài khác ổ còn khác gì nữa ko bạn? :eek:
+Vậy bạn có thể chọn Macbook Pro, bản 256 GB ổ cứng rồi về cài thêm Win vào chạy song song bằng VMWare hoặc Parallels Desktop. Đảm bảo công việc thuận lợi. Đi làm có thể dùng Win, về nhà lại chuyển sang Mac dùng
+Uh mình gợi ý như vậy vì macbook pro có hẳn hệ thống tản nhiệt hoàn chỉnh, lại cpu mạnh hơn nên chạy riêng win, riêng mac hoặc chạy song song cả 2 hđh sẽ ok hơn là macbook air.
+Macbook air đời 2015 được sản xuất năm 2016 or 2017 nha bác. Nghe nói MacBook Air hết sản xuất (không biết thật không). Macbook air 13inch 2015 đáp ứng được đc bộ office của bác. Giá 20tr5 còn tuỳ nơi bán nữa.
+cửa hàng bán lại con này bản 256G hàng fpt bh 6 tháng 17 củ có nên xúc không nhỉ.thật lòng e mua về cài win chạy à
+Muốn xuất hình trên MBA 2015 ra tv thì sử dụng cổng nào trên máy khi máy ko có HDMI vậy AD
+Mini Display Port to HDMI . Apple ko có nhưng hãng thứ 3 có sx nha bạn.
+Đầy bạn nhé. Mình mua adapter ra hdmi cái, hay dây dài 1.5 m trực tiếp từ mini display port to hdmi Đực đều có cả nhé. Adapter giá 150k VND là dùng ngon lành hết :D
+mấy bác cho e hỏi dòng này muốn nâng ram nữa thì dc ko ạ
+Dòngg này không nâng cấp được ram
+con MJVE2 này có nâng cấp được ổ cứng không các bạn??? ví dụ: từ 128G->256G
+his são em sua mac air 13.3 2015 mã MJVE2 LL/A mà test tốc độ ổ cứng có 300 ghi và 700 đọc nhỉ ? em mua second hand hay là bị thay ổ cứng ạ ?
+1. Bạn chọn máy nào? > Macbook Pro 15 2. Vì sao? > Cần màn hình lớn và máy mạnh để làm nhiều việc
+Từ ngày MB ko còn táo phát sáng với cổng magsafe (sự khác biệt với phần còn lại). Mình thấy MB mất dần chất. Nên bớt hứng thú r. Hy vong thế hệ tiếp theo có nhiều đột phá hơn cái touchbar :(
+1. Bạn chọn máy nào? > 15 2. Vì sao? > Rộng thoải mái , màn hình to xem đã mắt hơn !
+1. Bạn chọn máy nào? > 15 inch 2. Vì sao? > Màn hình lớn đủ không gian làm việc. Chỉ bực là cái loa đang bị vấn đề mất cả tuần bảo hành rồi mà chưa nhận lại được.
+Nếu có tiền sẽ chọn macbook pro bản 2015. vì nó có đầy đủ các cổng kết nối cần thiết và cấu hình tốt chán. Sạc magsafe nữa. Rất nhiều reviewer, nhà thiết kế mẽo vẫn dùng các bản cũ chứ không chịu lên bản mới, vì họ thấy cấu hình, thiết kế mới chút đó chẳng đáng bù những cái bị mất đi và touchbar có quá ít tác dụng. Chỉ có mấy ông tinhte mới tung hô thôi, và tinhte cái gì liên quan apple cũng tung hô
+Ổng chửi cổng UsB C sml luôn mà bạn bảo ko chửi :D chửi lỗi bàn phím nữa nè.
+Chọn mac air 13" max option: - max option thì thoải mái hiệu năng sử dụng cho mọi yêu cầu của mình - giá hợp lý - máy air vẫn đẹp, mỏng, nhẹ - vẫn còn cổng truyền thống, sạc magsafe, logo táo phát sáng
+chuẩn. đang xài con Air. pin ngon, mỏng, mượt, gọn nhẹ, dễ xách, ko có nhu cầu game và các phần mềm khác. chủ yếu web, phim, nhạc thấy rất okie
+Mac air max option: chip i7 2.2, ram 8gb, ssd 512gb, vga intel hd 6000 mà bạn bảo k chơi đc game á? Mình thấy nếu dùng ps không quá phức tạp vẫn ngon! Nói chung là quá ổn
+Mình thấy bản pro 2015 vẫn hợp lí hơn, đủ mạnh, pin trâu và cổng kết nối nhiều
+Tiếc là 2 món Apple mình đang dùng không liên quan đến tiêu đề. iMac Nhưng nếu được chọn thì 3 in 1 thì: Macbook Pro 13'. Đơn giản vì máy gọn, nhẹ, cấu hình cao. Vừa đủ phù hợp cho giải trí và công việc.
+MBP 15' không thay được ổ ssd, vậy nếu ổ cứng hư thì vứt máy hả Ad?
+mình thấy ssd của macbook dạng module mà. thay hay đổi cái khác dều đc ?
+Mấy con Mac mới ra bữa nay chỉ có 5 phần, Màn hình, khung máy, pin, bàn phím với main, hư cái nào thì thay mới cái đó, đỡ mất thời gian sửa chữa.
 
 
 

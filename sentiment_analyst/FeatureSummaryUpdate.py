@@ -80,7 +80,7 @@ class FutureSummaryUpdate:
         return {1: data_index}
 
     def dynamic_support(self, n: int, i: int):
-        new_min = 0.4 * math.log10(n) / (10 * i) + 0.4
+        new_min = 0.3 * math.log10(n) / (10 * i) + 0.3
         support = new_min * n / 100
         return support
 

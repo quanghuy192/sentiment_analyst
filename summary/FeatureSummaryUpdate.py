@@ -14,7 +14,7 @@ class FutureSummaryUpdate:
 
     # Just test
     def read_raw_file(self) -> list:
-        f = open("reviews_data_1.txt", "r+")
+        f = open("test_a100.txt", "r+")
         noun_list = []
         adj_list = []
         for line in f:
@@ -37,7 +37,8 @@ class FutureSummaryUpdate:
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
-        ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), 1))
+        # ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), 1))
+        ck_with_minsup = candidate.filter_with_support_min(1)
         ck = {1: ck_with_minsup}
         last_ck = ck
         k = 2
@@ -46,14 +47,14 @@ class FutureSummaryUpdate:
             if len(ck[k]) <= 0:
                 break
             print(ck)
-            print('>>>>>>>>>>>>>>>>>>>>>>>>>>')
             candidate = Candidate(ck[k])
             for i in self.transaction:
                 candidate.subset_for_candidate(i)
             print('------------ K = ----------------')
             print(k)
             print(self.dynamic_support(len(data), k))
-            ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
+            # ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
+            ck_with_minsup = candidate.filter_with_support_min(1)
             last_ck = ck
             ck = {k: ck_with_minsup}
             k += 1
@@ -79,7 +80,7 @@ class FutureSummaryUpdate:
 
     # Just test
     def dynamic_support(self, n: int, i: int):
-        new_min = 0.5 * math.log10(n) / (10 * i) + 0.15
+        new_min = 1.5 * math.log10(n) / (10 * i) + 1
         support = new_min * n / 100
         return support
 

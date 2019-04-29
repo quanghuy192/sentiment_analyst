@@ -6,6 +6,7 @@ class Candidate:
         for key, value in self.candidate.items():
             self.item_list.append(Item(key, value))
 
+    # Just test
     def subset_for_candidate(self, transaction: list):
         for i in self.item_list:
             value_list = i.value.split(',')

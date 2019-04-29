@@ -5,12 +5,14 @@ import collections
 from Candidate import Candidate
 from underthesea import sent_tokenize
 import math
+import unittest
 
 
 class FutureSummaryUpdate:
     transaction = []
     sentences = []
 
+    # Just test
     def read_raw_file(self) -> list:
         f = open("reviews_data.txt", "r+")
         noun_list = []
@@ -32,10 +34,6 @@ class FutureSummaryUpdate:
 
     def apriori(self, data: list) -> list:
         ck = self.gen_large_1_item_set(data)
-        print(ck)
-        print('------------ K = ----------------')
-        print(1)
-        print(self.dynamic_support(len(data), 1))
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
@@ -66,6 +64,7 @@ class FutureSummaryUpdate:
         print(set(feature))
         return []
 
+    # Just test
     def gen_large_1_item_set(self, data: list) -> dict:
         temp_set = []
         for i in data:
@@ -76,9 +75,9 @@ class FutureSummaryUpdate:
         for i in set(temp_set):
             data_index[index] = i
             index += 1
-
         return {1: data_index}
 
+    # Just test
     def dynamic_support(self, n: int, i: int):
         new_min = 0.3 * math.log10(n) / (10 * i) + 0.3
         support = new_min * n / 100
@@ -138,7 +137,7 @@ class FutureSummaryUpdate:
 
         first_temp = []
         for q in b:
-            first_temp.append(data[q - 1])
+            first_temp.append(data[q])
         result.append(first_temp)
 
         is_continue = True
@@ -154,10 +153,11 @@ class FutureSummaryUpdate:
                     b[h] = b[i] + h - i
                 data_temp = []
                 for q in b:
-                    data_temp.append(data[q - 1])
+                    data_temp.append(data[q])
                 result.append(data_temp)
         return result
 
+    # Just test
     def gen_item_from_2_sub(self, item1: list, item2: list) -> str:
         item1.extend(item2)
         result = ''
@@ -165,6 +165,7 @@ class FutureSummaryUpdate:
             result += i + ','
         return result[:-1]
 
+    # Just test
     def one_word_prune(self, word: str) -> bool:
         if len(word) > 1:
             return True
@@ -173,8 +174,13 @@ class FutureSummaryUpdate:
 
 
 def main():
-    x = FutureSummaryUpdate()
-    x.apriori(x.read_raw_file())
+    summary = FutureSummaryUpdate()
+    # summary.apriori(summary.read_raw_file())
+
+    a = ['1', '2', '3', '4', '5', '6']
+    b = ['t', 'h', 'k', 'm', 'a', 'b']
+
+    print(summary.combination_gen(a, len(a)))
 
 
 if __name__ == '__main__':

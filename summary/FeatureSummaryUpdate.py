@@ -14,7 +14,7 @@ class FutureSummaryUpdate:
 
     # Just test
     def read_raw_file(self) -> list:
-        f = open("reviews_data.txt", "r+")
+        f = open("reviews_data_1.txt", "r+")
         noun_list = []
         adj_list = []
         for line in f:
@@ -59,7 +59,7 @@ class FutureSummaryUpdate:
             k += 1
         print('------------- Feature --------------')
         feature = []
-        for key, value in last_ck[k-1].items():
+        for key, value in last_ck[k - 1].items():
             feature.extend(set(str(value).split(',')))
         print(set(feature))
         return []
@@ -79,10 +79,11 @@ class FutureSummaryUpdate:
 
     # Just test
     def dynamic_support(self, n: int, i: int):
-        new_min = 0.3 * math.log10(n) / (10 * i) + 0.3
+        new_min = 0.5 * math.log10(n) / (10 * i) + 0.15
         support = new_min * n / 100
         return support
 
+    # Just test
     def apriori_gen(self, large_k_item: dict, k: int) -> dict:
         ck = {}
         s1 = large_k_item
@@ -104,8 +105,27 @@ class FutureSummaryUpdate:
                     else:
                         break
 
-        self.apriori_prune(ck, k, large_k_item)
-        return {k: ck}
+        return {k: self.apriori_prune(ck, k, large_k_item)}
+
+    # def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
+    #     result = {}
+    #     for k, v in ck.items():
+    #         value_list = str(v).split(',')
+    #
+    #         sub_list = self.combination_gen(value_list, n)
+    #
+    #         is_contain = False
+    #         for key, value in last_ck.items():
+    #             for i in sub_list:
+    #                 list_value_list = str(value).split(',')
+    #                 size = len(set(list_value_list) & set(i))
+    #                 if size == n - 1:
+    #                     is_contain = True
+    #                 else:
+    #                     continue
+    #         if is_contain:
+    #             result[k] = v
+    #     return result
 
     def apriori_prune(self, ck: dict, n: int, last_ck: dict) -> dict:
         result = {}
@@ -114,19 +134,20 @@ class FutureSummaryUpdate:
 
             sub_list = self.combination_gen(value_list, n)
 
-            is_contain = False
+            count = 0
             for key, value in last_ck.items():
                 for i in sub_list:
                     list_value_list = str(value).split(',')
                     size = len(set(list_value_list) & set(i))
                     if size == n - 1:
-                        is_contain = True
+                        count += 1
                     else:
                         continue
-            if is_contain:
+            if count == len(sub_list):
                 result[k] = v
         return result
 
+    # Just test
     def combination_gen(self, data: list, n: int) -> list:
         result = []
         k = n - 1
@@ -175,12 +196,7 @@ class FutureSummaryUpdate:
 
 def main():
     summary = FutureSummaryUpdate()
-    # summary.apriori(summary.read_raw_file())
-
-    a = ['1', '2', '3', '4', '5', '6']
-    b = ['t', 'h', 'k', 'm', 'a', 'b']
-
-    print(summary.combination_gen(a, len(a)))
+    summary.apriori(summary.read_raw_file())
 
 
 if __name__ == '__main__':

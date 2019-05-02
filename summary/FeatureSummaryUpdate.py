@@ -14,16 +14,18 @@ class FutureSummaryUpdate:
 
     # Just test
     def read_raw_file(self) -> list:
-        f = open("test_a100.txt", "r+")
+        f = open("test_a1000.txt", "r+")
         noun_list = []
         adj_list = []
         for line in f:
             result = pos_tag(line)
+            print(result)
+            print('\n')
             record_n = []
             record_adj = []
             self.sentences.extend(sent_tokenize(line))
             for item in result:
-                if item[1] == 'N' and self.one_word_prune(item[0]):
+                if self.is_noun(item[1]) and self.one_word_prune(item[0]):
                     record_n.append(str(item[0]).lower())
                 if item[1] == 'A' or item[1] == 'AP':
                     record_adj.append(str(item[0]).lower())
@@ -32,13 +34,19 @@ class FutureSummaryUpdate:
         self.transaction = noun_list
         return noun_list
 
+    def is_noun(self, type: str) -> bool:
+        if type in ['N', 'Np', 'NP', 'Nc', 'Nu']:
+            return True
+        else:
+            return False
+
     def apriori(self, data: list) -> list:
         ck = self.gen_large_1_item_set(data)
         candidate = Candidate(ck[1])
         for i in self.transaction:
             candidate.subset_for_candidate(i)
-        # ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), 1))
-        ck_with_minsup = candidate.filter_with_support_min(1)
+        ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), 1))
+        # ck_with_minsup = candidate.filter_with_support_min(3)
         ck = {1: ck_with_minsup}
         last_ck = ck
         k = 2
@@ -53,8 +61,8 @@ class FutureSummaryUpdate:
             print('------------ K = ----------------')
             print(k)
             print(self.dynamic_support(len(data), k))
-            # ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
-            ck_with_minsup = candidate.filter_with_support_min(1)
+            ck_with_minsup = candidate.filter_with_support_min(self.dynamic_support(len(data), k))
+            # ck_with_minsup = candidate.filter_with_support_min(3)
             last_ck = ck
             ck = {k: ck_with_minsup}
             k += 1
@@ -80,12 +88,13 @@ class FutureSummaryUpdate:
 
     # Just test
     def dynamic_support(self, n: int, i: int):
-        new_min = 1.5 * math.log10(n) / (10 * i) + 1
+        new_min = 0.3 * math.log10(n) / (10 * i) + 0.3
         support = new_min * n / 100
         return support
 
     # Just test
     def apriori_gen(self, large_k_item: dict, k: int) -> dict:
+
         ck = {}
         s1 = large_k_item
         s2 = large_k_item
